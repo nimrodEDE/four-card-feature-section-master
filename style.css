@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+  background-color: var(--Very-Light-Gray);
+}
+
+.container {
+  text-align: center;
+  padding: 3rem 1.1rem;
+}
+
+h1 {
+  font-size: 1.2rem;
+  font-weight: 650;
+  color: var(--Very-Dark-Blue);
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+p {
+  color: var(--Grayish-Blue);
+}
+
+.desc {
+  margin: 0.5rem 0.7em 2rem;
+  text-wrap: wrap;
+  font-size: 0.7rem;
+  color: var(--Grayish-Blue);
+}
+
+.card {
+  background-color: #fff;
+  max-width: 15rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  padding-bottom: 0;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Optional: adds smooth rounded corners */
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: var(--Very-Dark-Blue);
+}
+
+.card p {
+  font-size: 0.65rem;
+  margin-bottom: 1.2rem;
+}
+
+.img-container {
+  text-align: right;
+  padding: 1rem 0.8rem;
+}
+
+img {
+  width: 25%;
+}
+
+/* coloring the cards */
+
+.red {
+  border-top: var(--Red) solid 3px;
+}
+
+.bright-blue {
+  border-top: var(--Cyan) solid 3px;
+}
+
+.yellow {
+  border-top: var(--Orange) solid 3px;
+}
+
+.blue {
+  border-top: var(--Blue) solid 3px;
+}
+
+/* media queries */
+
+@media (min-width: 25rem) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 70%;
+    margin-inline: auto;
+    gap: 1rem;
+  }
+
+  .card {
+    margin-inline: auto;
+  }
+
+  .red {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .yellow {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .long-bright-blue {
+    grid-row: 1 / 3;
+    grid-column: 1;
+    margin-left: 4rem;
+  }
+
+  .long-blue {
+    grid-row: 1 / 3;
+    grid-column: 3;
+    margin-right: 4rem;
+  }
+
+  .blue,
+  .bright-blue {
+    margin-top: 7em;
+    width: 100%;
+  }
+
+  .desc {
+    width: 50ch;
+    margin-inline: auto;
+  }
+}
